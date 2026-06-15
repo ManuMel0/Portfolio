@@ -1944,6 +1944,21 @@ header .logo a {
 	#portfolio .folio-title {
 		font-size: 2.5rem;
 	}
+	#portfolio .portfolio-list.portfolio-list-stacked {
+		display: block;
+	}
+	#portfolio .portfolio-list.portfolio-list-stacked > #folio-wrapper {
+		max-width: 42rem;
+		margin: 0 auto 2.4rem;
+	}
+	#portfolio .portfolio-list.portfolio-list-stacked > #folio-wrapper:last-child {
+		margin-bottom: 0;
+	}
+	#portfolio .portfolio-list.portfolio-list-stacked .folio-item img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
 }
 @media only screen and (max-width:400px) {
 	#portfolio .folio-title {

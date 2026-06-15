@@ -60,16 +60,20 @@
 	------------------------------------------------------ */ 
 	var $portfolioSlider = $("#owl-slider-port");
 	$portfolioSlider.children().slice(3).remove();
-	$portfolioSlider.owlCarousel({
-        navigation: false,
-        pagination: false,
-        itemsCustom : [
-	        [0, 3],
-	        [800, 3],
-	        [1350, 3]
-	     ],
-        navigationText: false
-    });
+	if ($(window).width() <= 768) {
+		$portfolioSlider.addClass("portfolio-list-stacked");
+	} else {
+		$portfolioSlider.owlCarousel({
+        	navigation: false,
+        	pagination: false,
+        	itemsCustom : [
+	        	[0, 3],
+	        	[800, 3],
+	        	[1350, 3]
+	     	],
+        	navigationText: false
+    	});
+	}
 
 
 	/*---------------------------------------------------- */
