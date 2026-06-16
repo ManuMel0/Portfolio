@@ -23,3 +23,5 @@ jobs:
             --exclude ".git/*" \
             --exclude ".github/*" \
             --cache-control "max-age=0,no-cache,no-store,must-revalidate"
+      - name: Invalidate CloudFront Cache
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION_ID }} --paths "/*"
